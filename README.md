@@ -1,10 +1,9 @@
 # Live-Sentimental-analysis-on-Twitter-X-Data
-
+Check out- https://live-sentimental-analysis-harshal-bhavane.streamlit.app/
 
 ## What it actually is??
 Live Sentiment Analysis on Twitter(X) Data is a web application designed to analyze the sentiment of tweets related to various topics, focusing on real-time data sourced from Twitter. The application leverages natural language processing (NLP) techniques to determine whether tweets are positive, negative, or neutral in sentiment. Users can input a topic of interest, and the application retrieves tweets using the Twitter API. 
 
-Check out- https://live-sentimental-analysis-harshal-bhavane.streamlit.app/
 
 ![image](https://github.com/hbhavane/Live-Sentimental-analysis-on-Twitter-X-Data/assets/78750775/6e7f4444-5a75-4d1c-9082-76e0d64f17b9)
 
