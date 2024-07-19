@@ -110,8 +110,9 @@ def main():
 
     if Topic:
         st.warning("Due to limited access to the Twitter API, we cannot retrieve tweets at this time. We have noted your keyword and will add the data to the topics below soon. Thank you!")
+        st.warning(" Please Reload the page and try again from below Topics")
     
-    st.header("Or use the existing downloaded Data for below topics")
+    st.header("Use the existing downloaded data from the topics below.")
     
 
     if st.button("ChatGPT"):
