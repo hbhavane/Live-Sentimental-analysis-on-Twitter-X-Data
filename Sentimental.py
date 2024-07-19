@@ -103,20 +103,21 @@ def main():
     st.header("Or use the existing downloaded Data for below topics")
     
 
-    if st.button("Covid Learning"):
-        df = pd.read_csv("TweetDataset.csv")
+    if st.button("ChatGPT"):
+        df = pd.read_csv("TweetDataset2.csv")
         st.session_state['df'] = df
-        st.session_state['topic'] = "Covid Learning"
+        st.session_state['topic'] = "ChatGPT"
 
     if st.button("LGBTQ"):
         df = pd.read_csv("TweetDataset2.csv")
         st.session_state['df'] = df
         st.session_state['topic'] = "LGBTQ"
-
-    if st.button("ChatGPT"):
-        df = pd.read_csv("TweetDataset2.csv")
+    
+    if st.button("Covid Learning"):
+        df = pd.read_csv("TweetDataset.csv")
         st.session_state['df'] = df
-        st.session_state['topic'] = "ChatGPT"
+        st.session_state['topic'] = "Covid Learning"
+
 
     if len(Topic) > 0 and not st.session_state.get('df'):
         with st.spinner("Please wait, Tweets are being extracted"):
