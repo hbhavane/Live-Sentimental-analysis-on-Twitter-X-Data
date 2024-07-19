@@ -154,37 +154,20 @@ def main():
             sns.countplot(data=df, x="Sentiment")
             st.pyplot()
 
-        # Example dataframe
-        df = pd.DataFrame({
-            "Sentiment": ["Positive", "Negative", "Neutral", "Positive", "Neutral"]
-        })
-        
         if st.button("Get Pie Chart for Different Sentiments"):
             st.success("Generating A Pie Chart")
-            # Calculate sentiment counts
-            sentiment_counts = df['Sentiment'].value_counts()
-        
-            # Prepare data for pie chart
-            labels = sentiment_counts.index
-            sizes = sentiment_counts.values
-            explode = (0.1, 0.0, 0.1)  # Explode the 1st and 3rd slice
-        
-            # Create a figure with a specified size
-            fig, ax = plt.subplots(figsize=(4, 4))  # Adjust the figure size as needed
-        
-            # Plot pie chart
-            patches, texts, autotexts = ax.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
-                                               shadow=True, startangle=90)
-        
-            # Adjust text sizes
+            a = len(df[df["Sentiment"] == "Positive"])
+            b = len(df[df["Sentiment"] == "Negative"])
+            c = len(df[df["Sentiment"] == "Neutral"])
+            d = np.array([a, b, c])
+            explode = (0.1, 0.0, 0.1)
+            plt.figure(figsize=(3, 3))  
+            patches, texts, autotexts = plt.pie(d, shadow=True, explode=explode, labels=["Positive", "Negative", "Neutral"], autopct='%1.2f%%')
+            # Adjust the font size of text and autotexts based on the figure size
             for text in texts + autotexts:
-                text.set_fontsize(10)  # Set the font size
-        
-            ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-        
-            # Show plot in Streamlit
-            st.pyplot(fig)
-
+                text.set_fontsize(3)  
+            st.pyplot()
+            
         if st.button("Get Count Plot Based on Verified and unverified Users"):
             st.success("Generating A Count Plot (Verified and unverified Users)")
             st.subheader("Count Plot for Different Sentiments for Verified and unverified Users")
