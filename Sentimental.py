@@ -165,7 +165,7 @@ def main():
             patches, texts, autotexts = plt.pie(d, shadow=True, explode=explode, labels=["Positive", "Negative", "Neutral"], autopct='%1.2f%%')
             # Adjust the font size of text and autotexts based on the figure size
             for text in texts + autotexts:
-                text.set_fontsize(4)  
+                text.set_fontsize(3)  
             st.pyplot()
 
         if st.button("Get Count Plot Based on Verified and unverified Users"):
