@@ -10,6 +10,7 @@ from wordcloud import WordCloud, STOPWORDS
 import time
 import matplotlib.pyplot as plt
 import seaborn as sns
+from PIL import Image
 
 # To Hide Warnings
 st.set_option('deprecation.showfileUploaderEncoding', False)
