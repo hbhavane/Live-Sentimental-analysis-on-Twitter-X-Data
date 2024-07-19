@@ -161,7 +161,7 @@ def main():
             c = len(df[df["Sentiment"] == "Neutral"])
             d = np.array([a, b, c])
             explode = (0.1, 0.0, 0.1)
-            plt.figure(figsize=(2, 2))  
+            plt.figure(figsize=(3, 3))  
             patches, texts, autotexts = plt.pie(d, shadow=True, explode=explode, labels=["Positive", "Negative", "Neutral"], autopct='%1.2f%%')
             # Adjust the font size of text and autotexts based on the figure size
             for text in texts + autotexts:
