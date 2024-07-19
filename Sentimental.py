@@ -161,13 +161,16 @@ def main():
             c = len(df[df["Sentiment"] == "Neutral"])
             d = np.array([a, b, c])
             explode = (0.1, 0.0, 0.1)
-            plt.figure(figsize=(2, 2))  
+            plt.figure(figsize=(4, 4))  # Adjusted size for better visibility
             patches, texts, autotexts = plt.pie(d, shadow=True, explode=explode, labels=["Positive", "Negative", "Neutral"], autopct='%1.2f%%')
             # Adjust the font size of text and autotexts based on the figure size
-            for text in texts + autotexts:
-                text.set_fontsize(3)  
+            for text in texts:
+                 text.set_fontsize(10)  # Set the font size for labels
+            for autotext in autotexts:
+                 autotext.set_fontsize(10)  # Set the font size for autopct
             st.pyplot()
-            
+
+         
         if st.button("Get Count Plot Based on Verified and unverified Users"):
             st.success("Generating A Count Plot (Verified and unverified Users)")
             st.subheader("Count Plot for Different Sentiments for Verified and unverified Users")
