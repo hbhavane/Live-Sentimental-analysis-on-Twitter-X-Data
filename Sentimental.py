@@ -113,6 +113,11 @@ def main():
         st.session_state['df'] = df
         st.session_state['topic'] = "LGBTQ"
 
+    if st.button("ChatGPT"):
+        df = pd.read_csv("TweetDataset2.csv")
+        st.session_state['df'] = df
+        st.session_state['topic'] = "ChatGPT"
+
     if len(Topic) > 0 and not st.session_state.get('df'):
         with st.spinner("Please wait, Tweets are being extracted"):
             df = get_tweets(Topic, Count=200)
