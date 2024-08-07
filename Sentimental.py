@@ -13,8 +13,8 @@ import seaborn as sns
 from PIL import Image
 
 # To Hide Warnings
-st.set_option('deprecation.showfileUploaderEncoding', False)
-st.set_option('deprecation.showPyplotGlobalUse', False)
+# st.set_option('deprecation.showfileUploaderEncoding', False)
+# st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def main():
     st.set_page_config(page_title="LIVE Tweets Sentimental Analysis", layout="wide")
